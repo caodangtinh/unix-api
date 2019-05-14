@@ -1,4 +1,6 @@
 # unix-api
+# Prerequisite
+  - Download java 8 from https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 # Checkout and Build
 git checkout https://github.com/caodangtinh/unix-api.git
 # How To Run
