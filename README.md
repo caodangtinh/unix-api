@@ -5,7 +5,8 @@ git checkout https://github.com/caodangtinh/unix-api.git
   - Run with default system file
     - java -jar target/unix-api-0.0.1-SNAPSHOT.jar
   - Run with configurable input file
-    - java -jar target/unix-api-0.0.1-SNAPSHOT.jar --passwd-file=/etc/passwd --group-file=/etc/group
+    - java -jar target/unix-api-0.0.1-SNAPSHOT.jar --passwd-file=path_to_passwd_file --group-file=path_to_group_file
+      - For example : java -jar target/unix-api-0.0.1-SNAPSHOT.jar --passwd-file=/etc/passwd --group-file=/etc/group
 # APIs
   # User's APIs
   - List all user : http://localhost:8080/api/v1/users
