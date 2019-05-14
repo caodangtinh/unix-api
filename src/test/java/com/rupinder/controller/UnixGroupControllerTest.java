@@ -1,7 +1,6 @@
 package com.rupinder.controller;
 
 import static org.hamcrest.Matchers.containsString;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -19,7 +18,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.rupinder.dto.Group;
-import com.rupinder.dto.PwdUser;
 import com.rupinder.service.UnixService;
 
 @RunWith(SpringRunner.class)
@@ -27,7 +25,6 @@ import com.rupinder.service.UnixService;
 @SpringBootTest
 public class UnixGroupControllerTest {
 
-	private static final PwdUser PWD_USER = new PwdUser("tinhcao:x:1000:1000:tinhcao,,,:/home/tinhcao:/bin/bash");
 	private static final Group GROUP = new Group("tinhcao:x:1000:");
 
 	@Autowired
@@ -39,22 +36,25 @@ public class UnixGroupControllerTest {
 	@Test
 	public void testGetListGroup() throws Exception {
 		when(unixService.getListGroup()).thenReturn(Collections.singletonList(GROUP));
-		// 
-		mockMvc.perform(get("api/v1/groups"))
-		.andExpect(status().isOk())
+		//
+		mockMvc.perform(get("/api/v1/groups")).andExpect(status().isOk())
 				.andExpect(content().string(containsString("name")));
 	}
 
 	@Test
 	public void testGetPwdGroupBbyId() throws Exception {
 		when(unixService.getPwdGroupBbyId(1000)).thenReturn(GROUP);
-		mockMvc.perform(get("api/v1/groups/1000")).andExpect(status().isOk())
+		mockMvc.perform(get("/api/v1/groups/1000")).andExpect(status().isOk())
 				.andExpect(content().string(containsString("name")));
 	}
 
 	@Test
-	public void testFilterGroup() {
-		fail("Not yet implemented");
+	public void testFilterGroup() throws Exception {
+		// mock call
+		when(unixService.filterGroup("tinhcao", null, null)).thenReturn(Collections.singletonList(GROUP));
+		//
+		mockMvc.perform(get("/api/v1/groups/query?name=tinhcao")).andExpect(status().isOk())
+				.andExpect(content().string(containsString("tinhcao")));
 	}
 
 }
