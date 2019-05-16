@@ -1,12 +1,12 @@
-package com.rupinder.cache;
+package com.coding.challenge.cache;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.rupinder.dto.Group;
-import com.rupinder.dto.PwdUser;
+import com.coding.challenge.dto.Group;
+import com.coding.challenge.dto.PwdUser;
 
 public class UserGroupCache {
 

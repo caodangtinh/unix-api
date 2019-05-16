@@ -1,4 +1,4 @@
-package com.rupinder;
+package com.coding.challenge;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

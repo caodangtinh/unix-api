@@ -1,4 +1,4 @@
-package com.rupinder.repository;
+package com.coding.challenge.repository;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,9 +9,9 @@ import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
 
-import com.rupinder.dto.Group;
-import com.rupinder.dto.PwdUser;
-import com.rupinder.utils.Constant;
+import com.coding.challenge.dto.Group;
+import com.coding.challenge.dto.PwdUser;
+import com.coding.challenge.utils.Constant;
 
 @Component
 public class UnixRepositoryImpl implements UnixRepository {

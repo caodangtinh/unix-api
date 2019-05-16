@@ -1,4 +1,4 @@
-package com.rupinder.utils;
+package com.coding.challenge.utils;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

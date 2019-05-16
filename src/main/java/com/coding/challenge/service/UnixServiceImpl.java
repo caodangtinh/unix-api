@@ -1,4 +1,4 @@
-package com.rupinder.service;
+package com.coding.challenge.service;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -6,17 +6,17 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.coding.challenge.repository.UnixRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
-import com.rupinder.cache.UserGroupCache;
-import com.rupinder.dto.Group;
-import com.rupinder.dto.PwdUser;
-import com.rupinder.repository.UnixRepository;
-import com.rupinder.utils.Constant;
+import com.coding.challenge.cache.UserGroupCache;
+import com.coding.challenge.dto.Group;
+import com.coding.challenge.dto.PwdUser;
+import com.coding.challenge.utils.Constant;
 
 @Component
 public class UnixServiceImpl implements UnixService {

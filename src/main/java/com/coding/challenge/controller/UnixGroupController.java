@@ -1,4 +1,4 @@
-package com.rupinder.controller;
+package com.coding.challenge.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rupinder.dto.Group;
-import com.rupinder.service.UnixService;
+import com.coding.challenge.dto.Group;
+import com.coding.challenge.service.UnixService;
 
 @RestController
 @RequestMapping(value = "api/v1/groups")

@@ -1,4 +1,4 @@
-package com.rupinder.dto;
+package com.coding.challenge.dto;
 
 import java.util.HashSet;
 import java.util.Set;

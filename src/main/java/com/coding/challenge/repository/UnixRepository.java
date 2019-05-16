@@ -1,9 +1,9 @@
-package com.rupinder.repository;
+package com.coding.challenge.repository;
 
 import java.util.List;
 
-import com.rupinder.dto.Group;
-import com.rupinder.dto.PwdUser;
+import com.coding.challenge.dto.Group;
+import com.coding.challenge.dto.PwdUser;
 
 public interface UnixRepository {
 	List<PwdUser> getListPwdUser();

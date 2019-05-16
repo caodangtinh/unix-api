@@ -1,10 +1,10 @@
-package com.rupinder.service;
+package com.coding.challenge.service;
 
 import java.util.Collection;
 import java.util.List;
 
-import com.rupinder.dto.Group;
-import com.rupinder.dto.PwdUser;
+import com.coding.challenge.dto.Group;
+import com.coding.challenge.dto.PwdUser;
 
 public interface UnixService {
 	Collection<PwdUser> getListPwdUser();

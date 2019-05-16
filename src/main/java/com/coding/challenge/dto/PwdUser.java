@@ -1,4 +1,4 @@
-package com.rupinder.dto;
+package com.coding.challenge.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

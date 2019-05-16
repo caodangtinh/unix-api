@@ -1,4 +1,4 @@
-package com.rupinder.controller;
+package com.coding.challenge.controller;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.mockito.Mockito.when;
@@ -17,9 +17,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.rupinder.dto.Group;
-import com.rupinder.dto.PwdUser;
-import com.rupinder.service.UnixService;
+import com.coding.challenge.dto.Group;
+import com.coding.challenge.dto.PwdUser;
+import com.coding.challenge.service.UnixService;
 
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
